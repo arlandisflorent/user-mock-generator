@@ -1,0 +1,20 @@
+{
+  "name": "user-mock-generator",
+  "version": "1.0.0",
+  "description": "An app to generate fake users",
+  "author": "Florent Arlandis",
+  "scripts": {
+    "start": "nodemon app",
+    "lint": "eslint --ext .js --fix"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.4",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}
