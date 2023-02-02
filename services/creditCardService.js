@@ -1,6 +1,7 @@
 const CreditCard = require('../assets/models/creditCard');
-const moment = require('moment');
-const Helper = require('./helper')
+const {addYears,format} = require('date-fns');
+const Helper = require('./helper');
+const DateService = require('./dateService');
 
 const CreditCardService = (module.exports = {});
 
@@ -21,9 +22,9 @@ CreditCardService.generateCVV = () => {
 }
 
 CreditCardService.generateValidationDate = () => {
-  const endDate = moment().add(3, 'years');
-  const startDate = moment();
-  return moment(Helper.getRandomNumber(startDate, endDate)).format('MM/YY');
+  const startDate = new Date();
+  const endDate =  addYears(new Date(), 3);
+  return format(DateService.getRandomDate(startDate, endDate), 'MM/yyyy');
 }
 
 CreditCardService.generateCreditCard = () => {

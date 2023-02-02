@@ -8,7 +8,7 @@
     "lint": "eslint --ext .js --fix"
   },
   "dependencies": {
-    "moment": "^2.29.4"
+    "date-fns": "^2.29.3"
   },
   "devDependencies": {
     "eslint": "^8.32.0",
