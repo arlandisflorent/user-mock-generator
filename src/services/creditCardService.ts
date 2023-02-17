@@ -1,9 +1,8 @@
-const CreditCard = require('../assets/models/creditCard');
-const {addYears,format} = require('date-fns');
-const Helper = require('./helper');
-const DateService = require('./dateService');
-
-const CreditCardService = (module.exports = {});
+export const CreditCardService = {} as any;
+import { addYears, format } from 'date-fns';
+import { Helper } from './helper';
+import { DateService } from './dateService';
+import { CreditCard } from '../assets/models/creditCard';
 
 // Visa :- Starting with 4, length 13 or 16 digits.
 CreditCardService.generateVisaNumber = () => {
@@ -23,7 +22,7 @@ CreditCardService.generateCVV = () => {
 
 CreditCardService.generateValidationDate = () => {
   const startDate = new Date();
-  const endDate =  addYears(new Date(), 3);
+  const endDate = addYears(new Date(), 3);
   return format(DateService.getRandomDate(startDate, endDate), 'MM/yyyy');
 }
 

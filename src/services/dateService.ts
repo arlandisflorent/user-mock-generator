@@ -1,10 +1,9 @@
-const Helper = require('./helper');
-const {format, subYears} = require('date-fns');
+import { format, subYears } from 'date-fns';
 
-const DateService = (module.exports = {});
+export const DateService = {} as any;
 
 // get random date between interval
-DateService.getRandomDate = (start, end) => {
+DateService.getRandomDate = (start: Date, end: Date) => {
   if (start >= end) {
     throw 'start must be inferior to end'
   }

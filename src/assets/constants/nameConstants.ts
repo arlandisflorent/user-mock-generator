@@ -1,6 +1,4 @@
-const NameConstants = (module.exports = {});
-
-NameConstants.firstnameListString = `MARIE
+export const firstnameListString = `MARIE
 	MARTINE
 	FRANÇOISE
 	CATHERINE
@@ -101,7 +99,7 @@ NameConstants.firstnameListString = `MARIE
 	JOSEPH
 	ROLAND`;
 
-NameConstants.lastnameListString = `Martin 
+export const lastnameListString = `Martin 
 Bernard 
 Thomas 
 Petit 

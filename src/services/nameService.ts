@@ -1,10 +1,9 @@
-const NameConstants = require('../assets/constants/nameConstants');
-
-const NameService = (module.exports = {});
+export const NameService = {} as any;
+import { firstnameListString, lastnameListString } from '../assets/constants/nameConstants';
 
 // remove spaces and accents, convert to lower case
-NameService.standardizeNameForMail = (string) => {
-  return string.trim()
+NameService.standardizeNameForMail = (name: string) => {
+  return name.trim()
     .toLowerCase()
     .replace(/[éèêë]/g, 'e')
     .replace(/[ç]/g, 'c')
@@ -13,17 +12,17 @@ NameService.standardizeNameForMail = (string) => {
 }
 
 // take a string and return array of standardized strings
-NameService.createArray = (nameListString) => {
+NameService.createArray = (nameListString: string) => {
   const nameList = nameListString.split('\n');
   return nameList.map((name) => NameService.standardizeNameForMail(name));
 }
 
 NameService.getFirstnameList = () => {
-  return NameService.createArray(NameConstants.firstnameListString);
+  return NameService.createArray(firstnameListString);
 
 }
 
 NameService.getLastnameList = () => {
-  return NameService.createArray(NameConstants.lastnameListString);
+  return NameService.createArray(lastnameListString);
 }
 

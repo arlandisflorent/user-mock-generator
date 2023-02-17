@@ -1,7 +1,7 @@
-const Helper = (module.exports = {});
+export const Helper = {} as any;
 
 // get random number between interval
-Helper.getRandomNumber = (start, end) => {
+Helper.getRandomNumber = (start: number, end: number) => {
   if (start >= end) {
     throw 'start must be inferior to end'
   }
@@ -9,6 +9,6 @@ Helper.getRandomNumber = (start, end) => {
 }
 
 // randomly select from  array
-Helper.selectRandom = (array) => {
+Helper.selectRandom = (array: any[]) => {
   return array[Math.floor(Math.random() * array.length)];
 }
