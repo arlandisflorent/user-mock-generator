@@ -1,35 +1,37 @@
 import { mailExtensionList, mailProviderList, mailSeparatorList } from '../assets/constants/mailConstants';
-import { Helper } from './helper';
-import { NameService } from './nameService';
 import { User } from '../assets/models/user';
-import { DateService } from './dateService';
-import { CreditCardService } from './creditCardService';
-
-export const UserService = {} as any;
+import { generateCreditCard } from './creditCardService';
+import { generateBirthDate } from './dateService';
+import { getRandomNumber, selectRandom } from './helper';
+import { getLastnameList, getFirstnameList } from './nameService';
 
 // return between 8 & 10 random characters
-UserService.generatePassword = ():string => {
-	return Math.random().toString(36).slice(-Helper.getRandomNumber(8, 10));
+export const generatePassword = (): string => {
+	return Math.random().toString(36).slice(-getRandomNumber(8, 10));
 };
 
 
 // generate a list of fake users
-UserService.generateUserList = (listSize: number):User[] => {
-	const firstnameList = NameService.getFirstnameList();
-	const lastnameList = NameService.getLastnameList();
+export const generateUserList = (
+	size = 25,
+	ageMin = 18,
+	ageMax = 65
+): User[] => {
+	const firstnameList = getFirstnameList();
+	const lastnameList = getLastnameList();
 	const result = [];
 
-	for (let i = 0; i < listSize; i++) {
-		const firstname = Helper.selectRandom(firstnameList);
-		const lastname = Helper.selectRandom(lastnameList);
+	for (let i = 0; i < size; i++) {
+		const firstname = selectRandom(firstnameList);
+		const lastname = selectRandom(lastnameList);
 		result.push(
 			new User(
 				firstname,
 				lastname,
-				`${firstname}${Helper.selectRandom(mailSeparatorList)}${lastname}@${Helper.selectRandom(mailProviderList)}.${Helper.selectRandom(mailExtensionList)}`,
-				UserService.generatePassword(),
-				DateService.generateDate(),
-				CreditCardService.generateCreditCard()
+				`${firstname}${selectRandom(mailSeparatorList)}${lastname}@${selectRandom(mailProviderList)}.${selectRandom(mailExtensionList)}`,
+				generatePassword(),
+				generateBirthDate(ageMin, ageMax),
+				generateCreditCard()
 			)
 		);
 	}

@@ -1,8 +1,7 @@
-export const NameService = {} as any;
 import { firstnameListString, lastnameListString } from '../assets/constants/nameConstants';
 
 // remove spaces and accents, convert to lower case
-NameService.standardizeNameForMail = (name: string): string => {
+export const standardizeNameForMail = (name: string): string => {
 	return name.trim()
 		.toLowerCase()
 		.replace(/[éèêë]/g, 'e')
@@ -12,17 +11,17 @@ NameService.standardizeNameForMail = (name: string): string => {
 };
 
 // take a string and return array of standardized strings
-NameService.createArrayForEmail = (nameListString: string): string[]  => {
+export const createArrayForEmail = (nameListString: string): string[]  => {
 	const nameList = nameListString.split('\n');
-	return nameList.map((name) => NameService.standardizeNameForMail(name));
+	return nameList.map((name) => standardizeNameForMail(name));
 };
 
-NameService.getFirstnameList = (): string[] => {
-	return NameService.createArrayForEmail(firstnameListString);
+export const getFirstnameList = (): string[] => {
+	return createArrayForEmail(firstnameListString);
 
 };
 
-NameService.getLastnameList = (): string[] => {
-	return NameService.createArrayForEmail(lastnameListString);
+export const getLastnameList = (): string[] => {
+	return createArrayForEmail(lastnameListString);
 };
 

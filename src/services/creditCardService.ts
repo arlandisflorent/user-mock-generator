@@ -1,11 +1,10 @@
-export const CreditCardService = {} as any;
 import { addYears, format } from 'date-fns';
-import { Helper } from './helper';
-import { DateService } from './dateService';
 import { CreditCard } from '../assets/models/creditCard';
+import { getRandomNumber } from './helper';
+import { getRandomDate } from './dateService';
 
 // Visa :- Starting with 4, length 13 or 16 digits.
-CreditCardService.generateVisaNumber = ():number => {
+export const generateVisaNumber = ():number => {
 	const cardNumberArray = new Array(16);
 	cardNumberArray[0] = 4;
 	for (let i = 1; i < cardNumberArray.length; i++) {
@@ -16,20 +15,20 @@ CreditCardService.generateVisaNumber = ():number => {
 };
 
 
-CreditCardService.generateCVV = ():number => {
-	return Helper.getRandomNumber(100, 999);
+export const generateCVV = ():number => {
+	return getRandomNumber(100, 999);
 };
 
-CreditCardService.generateValidationDate = ():string => {
+export const generateValidationDate = ():string => {
 	const startDate = new Date();
 	const endDate = addYears(new Date(), 3);
-	return format(DateService.getRandomDate(startDate, endDate), 'MM/yyyy');
+	return format(getRandomDate(startDate, endDate), 'MM/yyyy');
 };
 
-CreditCardService.generateCreditCard = ():CreditCard => {
+export const generateCreditCard = ():CreditCard => {
 	return new CreditCard(
-		CreditCardService.generateVisaNumber(),
-		CreditCardService.generateCVV(),
-		CreditCardService.generateValidationDate(),
+		generateVisaNumber(),
+		generateCVV(),
+		generateValidationDate(),
 	);
 };

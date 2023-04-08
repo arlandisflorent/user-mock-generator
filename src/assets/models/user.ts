@@ -1,3 +1,5 @@
+import { CreditCard } from './creditCard';
+
 export class User {
 	constructor(
     private firstname: string,
@@ -5,6 +7,6 @@ export class User {
     private email: string,
     private password: string,
     private dateOfBirth: string,
-    private creditCard: string) {
+    private creditCard: CreditCard) {
 	}
 }
