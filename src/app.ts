@@ -1,9 +1,8 @@
 
 import {UserService} from './services/userService';
 
-console.log('run1');
 (()=>{
-  console.log('run');
-  const userList = UserService.generateUserList(3);
+	const userList = UserService.generateUserList(3);
+	// eslint-disable-next-line
   console.log(userList);
-})()
+})();

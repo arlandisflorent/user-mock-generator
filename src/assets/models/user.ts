@@ -1,10 +1,10 @@
 export class User {
-  constructor(
+	constructor(
     private firstname: string,
     private lastname: string,
     private email: string,
     private password: string,
     private dateOfBirth: string,
     private creditCard: string) {
-  }
+	}
 }

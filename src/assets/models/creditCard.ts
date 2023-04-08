@@ -1,7 +1,7 @@
 export class CreditCard {
-  constructor(
+	constructor(
     private number: number,
     private cvv: number,
     private expirationDate: Date) {
-  }
+	}
 }
