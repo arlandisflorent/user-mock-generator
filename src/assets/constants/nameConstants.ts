@@ -1,0 +1,201 @@
+export const firstnameListString = `MARIE
+	MARTINE
+	FRANÇOISE
+	CATHERINE
+	CHANTAL	
+	BRIGITTE
+	DOMINIQUE
+	MONIQUE	
+	CHRISTINE
+	SYLVIE	
+	ANNIE	
+	NICOLE
+	PATRICIA
+	EVELYNE	
+	MICHÈLE	
+	CHRISTIANE
+	CLAUDINE
+	JACQUELINE
+	NADINE	
+	JOCELYNE
+	ANNICK	
+	JOËLLE	
+	JOSIANE	
+	DANIELLE
+	ELISABETH
+	ISABELLE
+	ANNE	
+	BERNADETTE
+	VÉRONIQUE	
+	MARYSE	
+	MARIE-CHRISTINE
+	BÉATRICE	
+	ANNE-MARIE
+	MIREILLE	
+	COLETTE	
+	GENEVIÈVE
+	PASCALE	
+	MICHELLE
+	GHISLAINE
+	ELIANE	
+	JOSETTE	
+	ODILE	
+	MARIE-CLAUDE
+	HÉLÈNE	
+	DANIELE	
+	LILIANE	
+	MARIE-THÉRÈSE
+	FRANCINE	
+	SYLVIANE	
+	AGNÈS	
+  JEAN
+	MICHEL
+	ALAIN	
+	PATRICK
+	PHILIPPE
+	CHRISTIAN
+	BERNARD	
+	DANIEL
+	GÉRARD
+	DOMINIQUE
+	DIDIER	
+	JACQUES	
+	PIERRE	
+	JEAN-PIERRE
+	CLAUDE	
+	PASCAL	
+	SERGE	
+	JOËL	
+	ANDRÉ	
+	GILLES
+	GUY	
+	JEAN-CLAUDE
+	MARC
+	YVES
+	THIERRY
+	FRANÇOIS
+	JEAN-LUC
+	FRANCIS	
+	BRUNO	
+	ERIC	
+	PATRICE
+	DENIS	
+	ROBERT
+	RENÉ	
+	JEAN-PAUL
+	GILBERT	
+	JEAN-LOUIS
+	JEAN-MARC	
+	GEORGES	
+	HERVÉ	
+	JEAN-MARIE
+	JEAN-MICHEL
+	ROGER	
+	JACKY	
+	JEAN-FRANÇOIS
+	HENRI	
+	JEAN-JACQUES
+	MARCEL
+	JOSEPH
+	ROLAND`;
+
+export const lastnameListString = `Martin 
+Bernard 
+Thomas 
+Petit 
+Robert
+Richard
+Durand 
+Dubois 
+Moreau 
+Laurent
+Simon 
+Michel
+Lefèvre
+Leroy 
+Roux 
+David
+Bertrand 
+Morel
+Fournier 
+Girard 
+Bonnet 
+Dupont 
+Lambert
+Fontaine
+Rousseau
+Vincent
+Muller
+Lefevre
+Faure 
+Andre 
+Mercier
+Blanc 
+Guerin
+Boyer
+Garnier
+Chevalier
+Francois 
+Legrand 
+Gauthier
+Garcia 
+Perrin 
+Robin 
+Clement
+Morin 
+Nicolas
+Henry 
+Roussel
+Mathieu
+Gautier
+Masson 
+Marchand
+Duval 
+Denis 
+Dumont
+Marie
+Lemaire
+Noel 
+Meyer
+Dufour
+Meunier
+Brun 
+Blanchard
+Giraud 
+Joly 
+Riviere 
+Lucas 
+Brunet 
+Gaillard
+Barbier
+Arnaud 
+Martinez
+Gerard
+Roche 
+Renard 
+Schmitt
+Roy 
+Leroux 
+Colin 
+Vidal 
+Caron 
+Picard
+Roger 
+Fabre 
+Aubert 
+Lemoine 
+Renaud
+Dumas 
+Lacroix 
+Olivier 
+Philippe 
+Bourgeois
+Pierre
+Benoit
+Rey 
+Leclerc
+Payet 
+Rolland 
+Leclercq 
+Guillaume
+Lecomte `;
