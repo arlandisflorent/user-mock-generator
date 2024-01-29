@@ -1,8 +1,8 @@
-import { mailExtensionList, mailProviderList, mailSeparatorList } from '../assets/constants/mailConstants';
 import { User } from '../assets/models/user';
 import { generateCreditCard } from './creditCardService';
 import { generateBirthDate } from './dateService';
-import { getRandomNumber, selectRandom } from './helper';
+import { generateEmailAddress } from './emailAddressService';
+import { getRandomNumber, getRandomFromArray } from './helper';
 import { getLastnameList, getFirstnameList } from './nameService';
 
 // return between 8 & 10 random characters
@@ -22,13 +22,14 @@ export const generateUserList = (
 	const result = [];
 
 	for (let i = 0; i < size; i++) {
-		const firstname = selectRandom(firstnameList);
-		const lastname = selectRandom(lastnameList);
+		const firstname = getRandomFromArray(firstnameList);
+		const lastname = getRandomFromArray(lastnameList);
+		const emailAddress = generateEmailAddress(firstname, lastname);
 		result.push(
 			new User(
 				firstname,
 				lastname,
-				`${firstname}${selectRandom(mailSeparatorList)}${lastname}@${selectRandom(mailProviderList)}.${selectRandom(mailExtensionList)}`,
+				emailAddress,
 				generatePassword(),
 				generateBirthDate(ageMin, ageMax),
 				generateCreditCard()
