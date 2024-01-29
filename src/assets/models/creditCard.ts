@@ -1,7 +1,7 @@
 export class CreditCard {
 	constructor(
-    private number: number,
-    private cvv: number,
-    private expirationDate: string) {
+    public number: number,
+    public cvv: number,
+    public expirationDate: string) {
 	}
 }
